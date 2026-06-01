@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuber Music Brand</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#e63946;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#e63946;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    font-weight:bold;
+}
+
+/* FILTER */
+.filter-btn{
+    background:#1a1a1a;
+    color:white;
+    border:1px solid #e63946;
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.filter-btn:hover{
+    background:#e63946;
+}
+
+/* BEATS */
+.beats{
+    padding:70px 10%;
+}
+
+.beat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.beat-card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.beat-link{
+    color:white;
+    text-decoration:none;
+}
+
+.beat-link:hover{
+    color:#e63946;
+}
+
+.price{
+    color:#e63946;
+    font-size:22px;
+    margin:10px 0;
+}
+
+/* CONTACT */
+#contact{
+    text-align:center;
+    padding:80px 20px;
+}
+
+#contact .btn{
+    margin:8px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    background:#111;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">CUBER MUSIC BRAND</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>Cuber Music Brand</h1>
+    <p>Gospel • Afro Gospel • Worship • Trap Beats</p>
+    <a href="#catalog" class="btn">Browse Beats</a>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div style="text-align:center; padding:20px;">
+    <button class="filter-btn" onclick="filterBeats('all')">All</button>
+    <button class="filter-btn" onclick="filterBeats('gospel')">Gospel</button>
+    <button class="filter-btn" onclick="filterBeats('worship')">Worship</button>
+    <button class="filter-btn" onclick="filterBeats('afro')">Afro</button>
+    <button class="filter-btn" onclick="filterBeats('trap')">Trap</button>
+    <button class="filter-btn" onclick="filterBeats('cinematic')">Cinematic</button>
+</div>
+
+<!-- CATALOG (50 beats layout) -->
+<section id="catalog" class="beats">
+<h2 style="text-align:center;margin-bottom:30px;">Beat Catalog</h2>
+
+<div class="beat-grid">
+
+    <div class="beat-card gospel">
+        <h3><a href="#pricing" class="beat-link">When Are You Coming</a></h3>
+        <p>Talk To God</p>
+        <p>Kingdom Flow</p>
+        <p>Grace Season</p>
+        <p>Saved By Mercy</p>
+        <p>Faith Walk</p>
+        <p>Cross Roads</p>
+        <p>Spirit Fire</p>
+        <p>Victory Anthem</p>
+        <p>Heaven's Call</p>
+    </div>
+
+    <div class="beat-card worship">
+        <h3>Worship Pack</h3>
+        <p><a href="#pricing" class="beat-link">Prayer</a></p>
+        <p>Secret Place</p>
+        <p>Holy Presence</p>
+        <p>Morning Devotion</p>
+        <p>Living Water</p>
+        <p>Near The Throne</p>
+        <p>Grace Upon Grace</p>
+        <p>Broken Chains</p>
+        <p>The Upper Room</p>
+        <p>Still Small Voice</p>
+    </div>
+
+    <div class="beat-card afro">
+        <h3>Afro Gospel Pack</h3>
+        <p>Praise Celebration</p>
+        <p>Joyful Noise</p>
+        <p>Kingdom Praise</p>
+        <p>Overflow</p>
+        <p>Testimony</p>
+        <p>Shine Your Light</p>
+        <p>Faithful God</p>
+        <p>Victory Dance</p>
+        <p>Hosanna Vibes</p>
+        <p>Blessed Nation</p>
+    </div>
+
+    <div class="beat-card trap">
+        <h3>Trap Pack</h3>
+        <p>Armor Up</p>
+        <p>Chosen One</p>
+        <p>Battle Ready</p>
+        <p>Lion Heart</p>
+        <p>Kingdom Soldier</p>
+        <p>No Turning Back</p>
+        <p>Revival Mode</p>
+        <p>Fearless</p>
+        <p>The Calling</p>
+        <p>Grace Over Grind</p>
+    </div>
+
+    <div class="beat-card cinematic">
+        <h3>Cinematic Pack</h3>
+        <p>Hope Rising</p>
+        <p>New Beginning</p>
+        <p>Purpose</p>
+        <p>Light In Darkness</p>
+        <p>Destiny</p>
+        <p>Redemption Story</p>
+        <p>Eternal Promise</p>
+        <p>Crowned In Glory</p>
+        <p>The Journey</p>
+        <p>Beyond The Horizon</p>
+    </div>
+
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="beats">
+<h2 style="text-align:center;">Pricing</h2>
+
+<div class="beat-grid">
+
+<div class="beat-card">
+<h3>Basic Lease</h3>
+<div class="price">$30</div>
+</div>
+
+<div class="beat-card">
+<h3>Premium Lease</h3>
+<div class="price">$50</div>
+</div>
+
+<div class="beat-card">
+<h3>Exclusive Rights</h3>
+<div class="price">$150+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Cuber Music Brand</h2>
+<br>
+
+<a href="https://wa.me/263777548085" class="btn">WhatsApp</a>
+<a href="mailto:blessedchitungo@gmail.com" class="btn">Email</a>
+<a href="https://www.instagram.com/atomic__cuber/" class="btn">Instagram</a>
+<a href="https://www.youtube.com/@cuber_music_brand" class="btn">YouTube</a>
+<a href="https://open.spotify.com/user/AtomicCuber" target="_blank" class="btn">
+    Spotify
+</a>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function filterBeats(category){
+    let beats = document.querySelectorAll('.beat-card');
+
+    beats.forEach(beat => {
+        if(category === 'all'){
+            beat.style.display = 'block';
+        }
+        else if(beat.classList.contains(category)){
+            beat.style.display = 'block';
+        }
+        else{
+            beat.style.display = 'none';
+        }
+    });
+}
+</script>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Cuber Music Brand
+</footer>
+
+</body>
+</html>
